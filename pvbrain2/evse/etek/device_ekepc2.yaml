@@ -491,17 +491,7 @@ number:
       if (pwm_val > 800 && pwm_val < 1000) {
         return 1000; 
       }
-      
-      return pwm_val;
-      // Conversion Watts -> Registre PWM (1.38f)
-      int pwm_val = int(x / 1.38f);
-      
-      // Sécurité : Si la valeur calculée tombe entre 8% (800) et 10% (1000)
-      // on force le 10% pour éviter la "zone interdite" qui fâche l'ID.3.
-      if (pwm_val > 800 && pwm_val < 1000) {
-        return 1000; 
-      }
-      
+            
       return pwm_val;
       
   
